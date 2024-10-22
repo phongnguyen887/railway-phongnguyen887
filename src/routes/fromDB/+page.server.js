@@ -21,13 +21,15 @@ import { createPool } from '@vercel/postgres';
 
 export async function load() {
     try{
-        const db = createPool({ connectionString: POSTGRES_URL})
+        const db = createPool({ connectionString: POSTGRES_URL })
         const { rows: containers } = await db.query(
-            `SELECT containerNumber,
+            `SELECT 
+                containerNumber,
                 nameOfShip,
                 containerSize,
                 dateContainerShipped 
-            FROM containers`
+            FROM 
+                containers`
         )
         return {
             containers: containers
