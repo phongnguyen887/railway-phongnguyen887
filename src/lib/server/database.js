@@ -1,16 +1,16 @@
 
-// import postgres from 'postgres'
+import postgres from 'postgres'
 
-// // see env variables in .env
-// import {PGCONNECT} from '$env/static/private';
+// see env variables in .env
+import {PGCONNECT} from '$env/static/private';
 
-// const sql = postgres(PGCONNECT, {} )
+const sql = postgres(PGCONNECT, {} )
 
-// export default sql;
+export default sql;
 
-import { POSTGRES_URL } from '$env/static/private'
+// import { POSTGRES_URL } from '$env/static/private'
 
-export default POSTGRES_URL;
+// export default POSTGRES_URL;
 
 // async function seed() {
 //   const createTable = await sql`
